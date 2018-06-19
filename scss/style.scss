@@ -1,0 +1,104 @@
+/////////////////////////
+// VARIABLES
+$color-code: #f2f2f2;
+
+/////////////////////////
+// BASE
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/////////////////////////
+// LAYOUT
+.container {
+  width: 60%;
+  margin: 4rem 20%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+
+  &__img {
+    height: 30rem;
+  }
+}
+
+.content {
+  margin: 8rem 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+  & > div {
+    margin: 2.5rem 0;
+  }
+}
+
+/////////////////////////
+// COMPONENTS
+.heading {
+  font-size: 6rem;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.subheading {
+  align-self: center;
+
+  &__link {
+    color: rgb(0, 194, 255);
+    text-decoration: underline;
+    font-size: 1.5rem;
+  }
+}
+
+.code {
+  background-color: $color-code;
+  border: 1px solid darken($color-code, 1);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  line-height: 3rem;
+
+  .title {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+
+  .row {
+    display: flex;
+
+    & > p {
+      flex: 0 0 90%;
+
+      &:first-of-type {
+        width: auto;
+        flex: 1;
+      }
+    }
+  }
+}
